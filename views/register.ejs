@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Register</title>
+</head>
+<body>
+    
+    <%-include('partials/header')%>
+
+    <main class="container-principal">        
+        <div class="container">
+            <div class="title">
+                <h1>Inscreva-se</h1>
+            </div>
+            <form action="/user/register" method="POST" class="formUser">
+                <label for="name">Nome*</label>
+                <input type="text" name="name" id="name" minlength="3" maxlength="50" required>
+    
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" minlength="3" maxlength="100" required>
+    
+                <label for="password">Senha*</label>
+                <input type="password" name="password" id="password" minlength="6" maxlength="100" required>
+    
+                <div class="div-redirect">
+                    <a href="/user/login">Já possui cadastro? Clique aqui</a>
+                </div>
+    
+                <div class="div-submit">
+                    <button class="btn-submit" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
