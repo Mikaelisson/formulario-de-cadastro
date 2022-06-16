@@ -2,8 +2,6 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require('jsonwebtoken');
 const {registerValidate, loginValidate} = require ('../controllers/validate');
-const { func } = require("@hapi/joi");
-const session = require('express-session')
 
 const userController = {
   register: async function (req, res) {

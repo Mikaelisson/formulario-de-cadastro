@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -35,7 +35,7 @@ body{
 }
 
 .container{
-    width: 100%;
+    min-width: 500px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -152,6 +152,7 @@ header{
 }
 
 .home{
+    box-sizing: content-box;
     width: 18px;
     padding: 10px;
     background-color: transparent;
@@ -160,6 +161,7 @@ header{
     border-bottom-left-radius: 50%;
     border-top-left-radius: 50%;
 }
+
 
 
 /* usuario */
@@ -172,8 +174,6 @@ header{
 }
 
 .img-user{
-    width: 50px;
-    height: 50px;
     border-radius: 50%;
     border: 2px solid gray;
     background-color: rgb(128, 128, 128, 0.5);
@@ -183,5 +183,49 @@ header{
 }
 
 .img-user svg{
-    width: 25px;
+    box-sizing: content-box;
+    width: 20px;
+    padding: 10px;
+}
+
+.name-user span{
+    position: relative;
+}
+
+.name-user span span{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(137, 221, 10);
+    border-radius: 50%;
+    filter: blur(1px);
+    position: absolute;
+    margin: 0 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-desconect{
+    display: flex;
+    width: 30px;
+    padding: 5px;
+    background-color: rgb(128, 128, 128, 0.3);
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.685);
+}
+.btn-desconect:active{
+    border: 2px solid transparent;
+}
+.btn-desconect:hover{
+    background-color: rgb(128, 128, 128, 0.6);
+}
+
+.btn-desconect svg{
+    width: 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container{
+        min-width: 80%;
+    }
 }
