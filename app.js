@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const router = require('./routes/router');
 const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
-const session = require('express-session')
+const session = require('express-session');
 const PORT = process.env.PORT;
 
 
@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGO_CONNECTION_URL, (error)=>{
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use('/styles', express.static(path.join(__dirname, 'views', 'styles')));
-app.use(session( {secret: 'nubw72d'} ))
+app.use(session( {secret: 'nubw72d', resave: true, saveUninitialized: true} ))
 
 
 app.use('/', router);

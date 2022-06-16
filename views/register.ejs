@@ -28,8 +28,12 @@
     
                 <div class="div-redirect">
                     <a href="/user/login">Já possui cadastro? Clique aqui</a>
+                </div>    
+                <div class="error">
+                    <%if(error){%>
+                        <p><%=error%></p>
+                    <%}%>
                 </div>
-    
                 <div class="div-submit">
                     <button class="btn-submit" type="submit">Enviar</button>
                 </div>
