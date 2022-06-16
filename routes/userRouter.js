@@ -5,13 +5,14 @@ const userController = require('../controllers/userController');
 
 
 router.get('/register', (req, res)=>{
-    res.render('register')
+    const error = null;
+    res.render('register', {error});
 });
 router.get('/login', (req, res)=>{
     req.session.login = null;
-    res.render('login')
+    const error = null;
+    res.render('login', {error})
 });
-router.get("/logged", userController.logged);
 
 
 router.post('/register', userController.register);

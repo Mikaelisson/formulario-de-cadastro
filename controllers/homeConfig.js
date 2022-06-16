@@ -4,7 +4,6 @@ const home = async (req, res) => {
   let user = req.session.login;
   let selectedUser;
   let userName;
-  console.log(user);
 
   try {
     if (user) {
@@ -13,7 +12,7 @@ const home = async (req, res) => {
     }
     res.render("index", { userName });
   } catch (error) {
-    res.send(error);
+    res.render('404', {error});
   }
 };
 
