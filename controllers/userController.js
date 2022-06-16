@@ -20,7 +20,7 @@ const userController = {
 
     try {
       await user.save();
-      res.redirect('/');
+      res.redirect('/user/login');
     } catch (error) {
       res.status(400).render('register', {error: 'Erro: verifique os dados e tente novamente.'});
     }

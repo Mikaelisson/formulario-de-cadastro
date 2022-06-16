@@ -200,7 +200,7 @@ header{
     filter: blur(1px);
     position: absolute;
     margin: 0 10px;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
 }
 

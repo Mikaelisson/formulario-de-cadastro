@@ -15,7 +15,11 @@
         
         <div class="container">
             <div class="title">
-                <h1>Inscreva-se ou Entre em sua conta</h1>
+                <%if(userName){%>
+                    <h1>Minha conta</h1>
+                <%}else{%>
+                    <h1>Inscreva-se ou Entre em sua conta</h1>
+                <%}%>
             </div>
 
             <div class="data-user">
@@ -24,7 +28,7 @@
                 </div>
                 <div class="name-user">
                     <%if(userName){%>
-                        <h2>Seja bem vindo, 
+                        <h2>Seja bem vindo(a) 
                             <span>
                                 <%=userName%> 
                                 <span></span> <!--icone online-->
@@ -36,7 +40,12 @@
                             </a>
                         </div>
                     <%}else{%>
-                        <h2>Entre na sua conta</h2>
+                        <h2>
+                            Entre na sua conta
+                            <span>
+                                <span style="background-color: red;"></span> <!--icone offline-->
+                            </span>
+                        </h2>
                     <%}%>
                 </div>
             </div>
